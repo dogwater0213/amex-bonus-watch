@@ -1,0 +1,40 @@
+name: Notify via ntfy
+
+on:
+  push:
+    branches: [main]
+    paths: ['outbox/*.json']
+  workflow_dispatch:
+    inputs:
+      title:
+        description: Notification title
+        required: false
+        default: Amex bonus watch test
+      message:
+        description: Notification text
+        required: false
+        default: Test notification from the GitHub relay.
+
+permissions:
+  contents: read
+
+concurrency:
+  group: notify
+  cancel-in-progress: false
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Send to ntfy
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          EVENT_NAME: ${{ github.event_name }}
+          BEFORE_SHA: ${{ github.event.before }}
+          IN_TITLE: ${{ inputs.title }}
+          IN_MESSAGE: ${{ inputs.message }}
+        run: bash scripts/notify.sh

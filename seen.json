@@ -1,0 +1,25 @@
+{
+  "note": "Amex Membership Rewards (US) transfer bonuses already known. The daily task alerts only on bonuses not listed here, then adds them.",
+  "bonuses": [
+    {
+      "id": "virgin-atlantic-30-2026-11",
+      "partner": "Virgin Atlantic Flying Club",
+      "bonus_pct": 30,
+      "ends": "2026-11-30",
+      "first_seen": "2026-11-15",
+      "source": "https://onemileatatime.com/deals/amex-virgin-atlantic-transfer-bonus/",
+      "notified": false,
+      "seeded": true
+    },
+    {
+      "id": "marriott-bonvoy-35-2026-11",
+      "partner": "Marriott Bonvoy",
+      "bonus_pct": 35,
+      "ends": "2026-12-10",
+      "first_seen": "2026-11-15",
+      "source": "https://thriftytraveler.com/?p=98456",
+      "notified": false,
+      "seeded": true
+    }
+  ]
+}
