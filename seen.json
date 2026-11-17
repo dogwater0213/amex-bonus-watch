@@ -20,6 +20,16 @@
       "source": "https://thriftytraveler.com/?p=98456",
       "notified": false,
       "seeded": true
+    },
+    {
+      "id": "avianca-lifemiles-10-2026-11",
+      "partner": "Avianca LifeMiles",
+      "bonus_pct": 10,
+      "ends": "2026-12-16",
+      "first_seen": "2026-11-17",
+      "source": "https://onemileatatime.com/deals/amex-avianca-lifemiles-transfer-bonus/",
+      "targeted": false,
+      "notified": true
     }
   ]
 }
